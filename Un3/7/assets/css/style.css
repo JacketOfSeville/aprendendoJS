@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #03a96c;
+    --primary-color-darker: #024b30;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculadora {
+    width: 400px;
+}
+
+.display {
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    background: #acacac;
+}
+
+.btn:hover {
+    background: #767676;
+}
+
+.btn-num {
+    background: #dfdfdf;
+}
+
+.btn-num:hover {
+    background: #9e9e9e;
+}
+
+.btn-eq {
+    background: rgb(96, 133, 243);
+}
+
+.btn-eq:hover {
+    background: royalblue;
+}
