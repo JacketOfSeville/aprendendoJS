@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Aula 13</title>
+</head>
+<body>
+
+    <!-- window.document.body.innerHTML = "Qualquer coisa"
+    Altera o que está no <body> -->
+
+    <!-- window.document.body.innerHTML += "Qualquer coisa
+    Incrementa ao <body> -->
+    <script>
+        const nome = prompt('Digite seu nome: ');
+        const largNome = nome.length;
+
+        const indicea = nome.indexOf('i');
+        const ultIndice = nome.lastIndexOf('i');
+        const ultTresLet = nome.slice(largNome-3, largNome);
+        const palavras = nome.split(' ');
+        const maius = nome.toUpperCase();
+        const minus = nome.toLowerCase();
+
+        document.body.innerHTML += `Nome: <b>${nome}</b><br />`;
+        document.body.innerHTML += `Seu nome tem <b>${largNome}</b> letras<br />`;
+        document.body.innerHTML += `A segunda letra do seu nome é <b>${nome[1]}</b> <br />`
+        document.body.innerHTML += `Primeiro índice da letra 'i' é <b>${indicea}</b><br />`
+        document.body.innerHTML += `Último índice da letra 'i' é <b>${ultIndice}</b><br />`
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: <b>${ultTresLet}</b><br />`;
+        document.body.innerHTML += `As palavras do seu nome são: <b>${palavras}</b><br />`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: <b>${maius}</b><br />`;
+        document.body.innerHTML += `Seu nome com letras minúsculas: <b>${minus}</b><br />`;
+    </script>
+    
+</body>
+</html>
