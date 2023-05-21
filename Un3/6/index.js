@@ -3,12 +3,21 @@ function criaPessoa(nome, sobrenome, peso, altura) {
   return {
     nome,
     sobrenome,
-    nomeCompleto(){
-      return `${nome} ${sobrenome}`
+
+    get nomeCompleto(){
+      return `${this.nome} ${this.sobrenome}`
     },
-    fala: function(assunto) {
+
+    set nomeCompleto(valor) {
+      valor = valor.split(' ');
+      this.nome = valor.shift();
+      this.sobrenome = valor.join(' ');
+    },
+    
+    fala: function(assunto = 'falando sobre nada') {
       return `${this.nome} está ${assunto}.`;
     },
+
     peso,
     altura,
     get imc() {
@@ -18,6 +27,7 @@ function criaPessoa(nome, sobrenome, peso, altura) {
   };
 }
 
-const p1 = criaPessoa('Vinicius', 'Krummenauer', 80, 1.8);
-console.log(p1.nomeCompleto());
-console.log(p1.imc);
+const p1 = criaPessoa('Vini', 'Krummenauer', 80, 1.8);
+p1.nomeCompleto = 'Vinicius da Cruz Krummenauer';
+console.log(p1.nomeCompleto);
+console.log(p1.fala());
